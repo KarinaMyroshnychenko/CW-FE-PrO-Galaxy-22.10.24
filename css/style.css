@@ -1,0 +1,168 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*год Земли принимается за 40 секунд в анимации*/
+
+.galaxy {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../image/galaxy.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.sunny, .planet-1, .planet-2, .planet-3, .planet-4, .planet-5, .planet-6, .planet-7, .planet-8 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+.sunny {
+    width: 200px;
+    height: 200px;
+    background-image: url("../image/sunny.png");
+    background-size: 100% 100%;
+    animation: galaxyAnimation 180s infinite linear;
+}
+.planet-1 {
+    width: 165px;
+    height: 36px;
+    animation: galaxyAnimation 9.6s infinite linear;
+}
+.planet-1 > div {
+    width: 12px;
+    height: 12px;
+    background-image: url("../image/mer.png");
+    background-size: 100% 100%;
+    border-radius: 50%;
+}
+
+.planet-2 {
+    width: 195px;
+    height: 75px;
+    animation: galaxyAnimation 24.8s infinite linear;
+}
+.planet-2 > div {
+    width: 18px;
+    height: 18px;
+    background-image: url("../image/ven.png");
+    background-size: 100% 100%;
+    border-radius: 100%;
+}
+
+.planet-3 {
+    width: 240px;
+    height: 140px;
+    animation: galaxyAnimation 40s infinite linear; 
+}
+.planet-3 > .earth {
+    width: 30px;
+    height: 30px;
+    background-image: url("../image/earth.png");
+    background-size: 100% 100%;
+    border-radius: 100%;
+    position: relative;
+}
+.planet-3 > .earth >.satellit{
+    width: 29px;
+    height: 26px;
+    position: absolute;
+    animation: moonOrbit 2.96s infinite linear; 
+}
+.planet-3 > .earth > .satellit > .moon {
+    width: 3px;
+    height: 3px;
+    background-image: url("../image/moon.png") ; 
+    border-radius: 100%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.planet-4 {
+    width: 250px;
+    height: 185px;
+    animation: galaxyAnimation 75.3s infinite linear;
+}
+.planet-4 > div {
+    width: 16px;
+    height: 16px;
+    background-image: url("../image/mars.png");
+    background-size: 100% 100%;
+    border-radius: 100%;
+}
+
+.planet-5 {
+    width: 305px;
+    height: 280px;
+    animation: galaxyAnimation 474.8s infinite linear;
+}
+.planet-5 > div {
+    width: 42px;
+    height: 42px;
+    background-image: url("../image/jup.png");
+    background-size: 100% 100%;
+    border-radius: 100%;
+}
+
+.planet-6 {
+    width: 370px;
+    height: 394px;
+    animation: galaxyAnimation 1181s infinite linear;
+}
+.planet-6 > div {
+    width: 80px;
+    height: 65px;
+    background-image: url("../image/sat.png");
+    background-size: 100% 100%;
+    border-radius: 100%;
+}
+
+.planet-7 {
+    width: 385px;
+    height: 465px;
+    animation: galaxyAnimation 3372.5s infinite linear;
+}
+.planet-7 > div {
+    width: 65px;
+    height: 65px;
+    background-image: url("../image/uran.png");
+    background-size: 100% 100%;
+    border-radius: 100%;
+}
+
+.planet-8 {
+    width: 388px;
+    height: 510px;
+    animation: galaxyAnimation 6610s infinite linear;
+}
+.planet-8 > div {
+    width: 32px;
+    height: 32px;
+    background-image: url("../image/nep.png");
+    background-size: 100% 100%;
+    border-radius: 100%;
+}
+
+
+@keyframes galaxyAnimation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes moonOrbit {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
